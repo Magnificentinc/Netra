@@ -64,5 +64,11 @@ static netra *sharedObject;
 	netra *shared = [netra sharedInstance];
 	return shared.array;
 }
+
+///define gobal variable
+#ifdef DEBUG
+NSString* const ApiBaseUrl = @"http://www.wego.co.id/berita/v1/api/";
+#else
+#endif
 @end
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface netra : NSObject
+extern NSString* const ApiBaseUrl;
 @property (nonatomic, retain) NSString *newsT;
 @property (nonatomic, retain) NSString *newsC;
 @property (nonatomic, retain) NSString *page;

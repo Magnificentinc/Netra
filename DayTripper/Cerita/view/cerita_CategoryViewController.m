@@ -69,7 +69,7 @@
 	[vanbungkring openRight];
 }
 -(void)fetchCerita{
-	NSString *url=[NSString stringWithFormat:@"http://www.wego.co.id/berita/v1/api/get_category_posts/?id=%@&page=%@",[netra getContent],[netra getPage]];
+	NSString *url=[NSString stringWithFormat:@"%@get_category_posts/?id=%@&page=%@",ApiBaseUrl,[netra getContent],[netra getPage]];
 	NSLog(@"url->%@",url);
 	NSString *escaped = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSURL *URL = [NSURL URLWithString:escaped];

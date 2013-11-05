@@ -56,7 +56,7 @@ BOOL first = 1;
 	}
 
 	[cerita setUserInteractionEnabled:NO];
-	NSString *url=[NSString stringWithFormat:@"http://www.wego.co.id/berita/v1/api/?json=get_recent_posts&page=%@",[netra getPage]];
+	NSString *url=[NSString stringWithFormat:@"%@?json=get_recent_posts&page=%@",ApiBaseUrl,[netra getPage]];
 	NSString *escaped = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSURL *URL = [NSURL URLWithString:escaped];
 	NSURLRequest *request = [NSURLRequest requestWithURL:URL];
